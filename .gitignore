@@ -1,0 +1,5 @@
+venv
+config/__pycache__
+Pipfile
+frontend/node_modules
+frontend/yarn.lock
