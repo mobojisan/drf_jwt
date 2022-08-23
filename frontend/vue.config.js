@@ -1,9 +1,13 @@
-const { defineConfig } = require("@vue/cli-service");
-
 module.exports = {
+  pages: {
+    index: {
+      entry: "src/main.js",
+      title: "DRF Sample",
+    }
+  },
   outputDir: "../static",
   indexPath: "../templates/index.html",
-  publicPath: "process.ENV.NODE_ENV === production"
-  ? "/static/"
-  : "/"
+  publicPath: process.env.NODE_ENV === "production"
+    ? "/static/"
+    : "/"
 }

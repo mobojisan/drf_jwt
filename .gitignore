@@ -1,5 +1,7 @@
 venv
-config/__pycache__
+*/__pycache__
 Pipfile
+Pipfile.lock
 frontend/node_modules
 frontend/yarn.lock
+shop/migrations
