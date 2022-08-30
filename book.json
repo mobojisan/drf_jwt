@@ -1,0 +1,11 @@
+[
+{
+    "model": "shop.book",
+    "pk": "65f6ac89-fe01-4913-bc9d-6a643b9af14b",
+    "fields": {
+        "title": "d",
+        "price": 40,
+        "created_at": "2022-08-23T02:50:43.526Z"
+    }
+}
+]
