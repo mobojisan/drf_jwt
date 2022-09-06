@@ -16,6 +16,7 @@ class BookFilter(filters.FilterSet):
         model = Book
         fields = '__all__'
 
+
 class BookViewSet(viewsets.ModelViewSet, generic.ListView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
@@ -23,4 +24,9 @@ class BookViewSet(viewsets.ModelViewSet, generic.ListView):
     filterset_class = BookFilter
     filterset_fields = '__all__'
     permission_classes = [IsAuthenticatedOrReadOnly]
-    pagination_class = PageNumberPagination
+    
+    
+    class _Pagination(PageNumberPagination):
+        page_size_query_param = 'page_size'  # page_sizeクエリを定義。デフォルトはNoneになっているためここで明示しないとpage_sizeクエリが使えない
+    
+    pagination_class = _Pagination
